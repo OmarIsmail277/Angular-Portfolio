@@ -1,0 +1,44 @@
+@use "../../variables" as *;
+
+.footer {
+  background-color: $primary-color;
+  color: #fff;
+  
+  .container {
+    text-align: center;
+    
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+
+      li {
+        a {
+          color: #fff;
+          font-size: 1.2rem;
+          transition: all 0.3s ease;
+          padding: 0.5rem 1rem;
+          border: 2px solid #fff;
+          border-radius: 5px;
+
+          &:hover {
+            background-color: #fff;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}

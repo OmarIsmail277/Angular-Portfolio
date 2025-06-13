@@ -1,0 +1,9 @@
+<section class="skills">
+  <div class="container">
+    <h2>Skills</h2>
+    <div *ngFor="let skill of skills">
+      <label>{{skill.name}}</label>
+      <progress [value]="skill.level" max="100"></progress>
+    </div>
+  </div>
+</section>

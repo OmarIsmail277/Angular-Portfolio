@@ -1,0 +1,138 @@
+@use "../../variables" as *; // imports all with no namespace
+
+.about {
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba($primary-color, 0.05) 0%, transparent 100%);
+    pointer-events: none;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+
+    .about-info {
+      background: linear-gradient(135deg, $primary-color 0%, darken($primary-color, 10%) 100%);
+      color: #fff;
+      padding: 3.5rem;
+      border-radius: 30px;
+      box-shadow: 0 10px 30px rgba($primary-color, 0.2);
+      position: relative;
+      overflow: hidden;
+      animation: fadeIn 1s ease;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+        animation: rotate 20s linear infinite;
+      }
+
+      h2 {
+        margin-bottom: 1.5rem;
+        font-style: italic;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        font-size: 2.5rem;
+        position: relative;
+        display: inline-block;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          width: 60px;
+          height: 3px;
+          background: #fff;
+          border-radius: 2px;
+        }
+      }
+
+      p {
+        margin-bottom: 2rem;
+        line-height: 1.8;
+        font-size: 1.1rem;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 1;
+      }
+
+      a {
+        border: 3px solid #fff;
+        display: inline-block;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        color: #fff;
+        transition: all 0.4s ease;
+        margin-top: 1rem;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow: hidden;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent
+          );
+          transition: 0.5s;
+        }
+
+        &:hover {
+          background-color: #fff;
+          color: $primary-color;
+          transform: translateY(-3px);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+          &::before {
+            left: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

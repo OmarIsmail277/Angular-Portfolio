@@ -1,0 +1,97 @@
+@use "../../variables" as *;
+
+.projects {
+  background-color: #fff;
+  padding: 4rem 0;
+
+  .container {
+    h2 {
+      color: $primary-color;
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 0 1rem;
+
+      .project-card {
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        transition: all 0.3s ease;
+        border: 1px solid rgba($primary-color, 0.1);
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+
+        &:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 8px 25px rgba($primary-color, 0.15);
+          border-color: $primary-color;
+        }
+
+        h3 {
+          color: $primary-color;
+          margin-bottom: 1rem;
+          font-size: 1.1rem;
+          font-weight: bold;
+        }
+
+        p {
+          color: #666;
+          margin-bottom: 1.5rem;
+          line-height: 1.6;
+          font-size: 0.75rem;
+          flex-grow: 1;
+          overflow-y: auto;
+          padding-right: 0.5rem;
+
+          &::-webkit-scrollbar {
+            width: 6px;
+          }
+
+          &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 3px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background: rgba($primary-color, 0.3);
+            border-radius: 3px;
+
+            &:hover {
+              background: rgba($primary-color, 0.5);
+            }
+          }
+        }
+
+        a {
+          display: inline-block;
+          padding: 0.8rem 1.5rem;
+          background-color: $primary-color;
+          color: #fff;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 0.9rem;
+          letter-spacing: 0.5px;
+          margin-top: auto;
+          text-align: center;
+
+          &:hover {
+            background-color: darken($primary-color, 10%);
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+}
