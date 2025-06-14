@@ -9,6 +9,7 @@
   margin: 0;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   background-image: linear-gradient(
       to right,
       rgba(29, 30, 38, 0.9),
@@ -45,6 +46,7 @@
     text-align: center;
     position: relative;
     z-index: 1;
+    padding: 1rem;
 
     figure.my__image {
       width: 280px;
@@ -192,6 +194,89 @@
 
           img {
             transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Queries for Responsive Design
+@media screen and (max-width: 768px) {
+  .hero {
+    .container {
+      figure.my__image {
+        width: 220px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .main__links {
+        flex-direction: column;
+        gap: 1rem;
+        
+        a {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      .social__links {
+        a {
+          width: 60px;
+          height: 60px;
+          padding: 12px;
+
+          i {
+            font-size: 1.5rem;
+          }
+
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    .container {
+      figure.my__image {
+        width: 180px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      .social__links {
+        gap: 1rem;
+        
+        a {
+          width: 50px;
+          height: 50px;
+          padding: 10px;
+
+          i {
+            font-size: 1.2rem;
+          }
+
+          img {
+            width: 25px;
+            height: 25px;
           }
         }
       }
