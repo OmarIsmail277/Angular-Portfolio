@@ -1,0 +1,23 @@
+[33mcommit 28074e542d5457416263c6afb21b9da2e88583ad[m[33m ([m[1;36mHEAD -> [m[1;32mgh-pages[m[33m)[m
+Author: Omar Ahmed <omar.ismail277@gmail.com>
+Date:   Sun Jun 15 01:40:33 2025 +0300
+
+    Adjusted Responsiveness for Hero Section!
+
+[33mcommit 5683ff20c182f38f3aae79f2a3e5d9af7eba579b[m
+Author: Omar Ahmed <omar.ismail277@gmail.com>
+Date:   Sat Jun 14 23:39:46 2025 +0300
+
+    Refactored Projects Section to apply DRY principle
+
+[33mcommit b169ed5ce85d354267112c80a3de63dfbd7ce256[m
+Author: Omar Ahmed <omar.ismail277@gmail.com>
+Date:   Sat Jun 14 02:39:45 2025 +0300
+
+    Published First Angular Project
+
+[33mcommit 04fb55b46e9f65b7d089af5e74edc5c76960ad90[m
+Author: Omar Ahmed <omar.ismail277@gmail.com>
+Date:   Fri Jun 13 14:34:50 2025 +0300
+
+    initial commit
